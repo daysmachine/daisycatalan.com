@@ -1,0 +1,392 @@
+/* local font downloads */
+    @font-face {
+        src: url(fonts/Recursive/Recursive-VariableFont_CASL\,CRSV\,MONO\,slnt\,wght.ttf);
+        font-family: recursive;
+    }
+
+    @font-face {
+        src: url(fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf);
+        font-family: roboto-slab;
+    }
+
+/*background images per page*/
+    #index-page {
+        background-image: url("images/background/my-background.jpg");
+    }
+
+    #about-page {
+        background-image: url("images/background/yellow-mountain-background.jpeg");
+    }
+
+    #portfolio-page {
+        background-image: url("images/background/blue-waves-background.jpeg");
+    }
+
+    #degree-tracker-page {
+        background-image: url("images/background/purple-night-background.jpeg");
+    }
+
+
+/* General styles */
+    * {
+        box-sizing: border-box;
+        font-family: roboto-slab;
+    }
+
+    body {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-color: #464646;
+        background-position: center center;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: recursive;
+
+    }
+
+    /*unvisited link*/
+    a:link,
+    nav a:link,
+    header a:link {
+        color: khaki;
+        text-decoration: underline solid;
+    }
+
+    /*Visited Link*/
+    a:visited,
+    nav a:visited,
+    header a:visited {
+        color: rgb(174, 212, 248);
+    }
+
+
+    /*Hover over links CSS for default,nav, header*/
+    a:hover,
+    nav a:hover,
+    header a:hover {
+        color: rgb(174, 212, 248);
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+/* Navigation Menu */
+    nav a {
+        color: khaki;
+        font-weight: 500;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+
+
+    }
+
+    nav li {
+        float: left;
+    }
+
+
+    nav li a {
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+    }
+
+    li a:hover {
+        background-color: #111;
+    }
+
+
+    nav .right-link {
+        float: right;
+    }
+
+/*header*/
+    header {
+        border-bottom: 3px solid black;
+        text-align: center;
+        background: rgba(70, 69, 71, 0.596);
+        color: white;
+        background-size: cover;
+        background-position: center center;
+        height: auto;
+        width: auto;
+        font-size: 38px;
+        padding: 4px;
+
+    }
+
+    header h1 {
+        margin-top: 5px;
+        margin-bottom: 3px;
+        text-shadow: 1px 2px black;
+
+    }
+
+    header h2 {
+        margin: 0px 10px 10px 10px;
+        font-size: 25px;
+        text-shadow: 1px 2px black;
+    }
+
+    header p {
+        font-size: initial;
+        color: khaki;
+        text-align: center;
+        word-spacing: 30px;
+    }
+
+/*affects all containers of all html pages*/
+    /*.container affects the whole individual container holding everything*/
+    .container {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
+        flex-direction: row;
+        text-align: center;
+        /*test variable to see container space*/
+        /*background:red;*/
+    }
+
+
+    /*was originally in portfolio-page but i wanna see if it looks good everywhere*/
+    .container a {
+        color: black;
+    }
+
+    /*was originally in portfolio-page but i wanna see if it looks good everywhere*/
+    .container a:hover,
+    .container li a:hover {
+        background-color: rgba(241, 105, 105, 0.671);
+    }
+
+    /*Affects ALL divs within .container of all html pages*/
+    /*affects all the individiual div items, within the container*/
+    .container>div {
+        border-radius: 6px;
+        background: rgba(246, 246, 247, 0.863);
+        border: 3px solid;
+        padding: 10px;
+        margin: 4% auto;
+
+
+        /*test variable to see all div space(s)*/
+        /*background: blue;*/
+    }
+
+
+/*footer syle*/
+    footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        color: white;
+        text-align: center;
+    }
+
+
+/*MEDIA QUERIES FOR ALL HTML PAGES*/
+    /*FOR SCREENS SMALLER THAN 700px in width. (example: Medium Phone Size) */
+    @media (max-width:700px) {
+        nav a {
+            font-size: 55%;
+        }
+
+        header,
+        header h2 {
+            font-size: inherit;
+        }
+
+        header a {
+            font-size: 90%;
+        }
+
+        .container {
+            flex-direction: column;
+            margin: 0px auto;
+            padding: 0px 0px;
+            font-size: 80%;
+        }
+
+        .container>div {
+            width: 80%;
+            height: fit-content;
+            margin: 10% auto;
+        }
+
+    }
+
+/*******************************************************************/
+/*******************INDEX-PAGE SPECIFIC CSS*************************/
+
+    /* Containers (left, center, right)*/
+    #index-page .container {
+        transition: 1s;
+    }
+
+    #index-page .container>div {
+        width: 450px;
+        height: 450px;
+        position: relative;
+        /* margin: 80px auto; */
+        cursor: pointer;
+
+    }
+
+    #index-page .container>div:hover {
+        transform: scale(1.1);
+        background: rgb(174, 212, 248);
+        box-shadow: 2px 2px 2px #000;
+        z-index: 2;
+
+    }
+
+    .left {
+        float: left;
+    }
+
+    .center {
+        display: inline-block;
+        margin: auto;
+    }
+
+    .right {
+        float: right;
+    }
+
+    /* INDEX-PAGE MEDIA QUEURIES
+    /*FOR SCREENS SMALLER THAN 700px in width. (example: Medium Phone Size) */
+    @media (max-width:700px) {
+        #index-page .container {
+            flex-direction: column;
+            margin: 0px auto;
+            padding: 0px 0px;
+            font-size: 80%;
+        }
+
+        #index-page .container>div {
+            width: 80%;
+            height: fit-content;
+            margin: 10% auto;
+            box-shadow: 15px 15px 15px #000;
+            z-index: 2;
+        }
+
+        #index-page .container>div:hover {
+            transform: none;
+            background: khaki;
+            /*used to be none*/
+        }
+    }
+
+/*******************************************************************/
+/*******************ABOUT-PAGE SPECIFIC CSS*************************/
+    #about-page .container {
+        text-align: left;
+    }
+
+    #about-page .container .box-1 img {
+        display: flex;
+        margin: auto;
+        max-width: 60%;
+        max-height: 60%;
+    }
+
+    /*affect only the specified boxes */
+    #about-page .box-1 {
+        float: left;
+        flex-basis: 30%;
+    }
+
+    #about-page .box-2 {
+
+        float: right;
+        flex-basis: 65%;
+    }
+
+    @media(max-width: 1900px) {
+        #about-page .container {
+            align-items: flex-start;
+        }
+    }
+
+    /* i had @media(max-width:750px) but i changed it to 700px to match index media query
+
+/*******************************************************************/
+/*******************PORTFOLIO-PAGE SPECIFIC CSS*********************/
+
+    /*.container affects the whole container holding everything*/
+    #portfolio-page .container {
+        flex-direction: column;
+        justify-content: left;
+        text-align: left;
+        /* background:red; test variable to see the one container*/
+    }
+
+    /*affects all the individiual div items, within the container*/
+    #portfolio-page .container div {
+        width: 80%;
+        height: fit-content;
+        /* background: blue; test variable to see div space(s)*/
+    }
+
+    #portfolio-page .container img {
+        max-width: 20%;
+        max-height: 20%;
+        float: right;
+        margin: 1%;
+    }
+
+    /*need to check if this is needed or if i can delete */
+    #portfolio-page .box-1 {
+        float: center;
+        flex-basis: 95%;
+    }
+
+
+
+/*******************************************************************/
+/*******************DEGREE-TRACKER-PAGE SPECIFIC CSS****************/
+
+    /*.container affects the whole container holding everything*/
+    #degree-tracker-page.container {
+        flex-direction: column;
+        justify-content: left;
+        text-align: left;
+        /* align-items: flex-end; */
+        /* background:red; */
+    }
+
+    #degree-tracker-page .container img {
+        max-width: 20%;
+        max-height: 20%;
+        float: right;
+        margin: 1%;
+    }
+
+    /*affect only the specified boxes*/
+    #degree-tracker-page .box-1 {
+        float: center;
+        flex-basis: 95%;
+        text-align:left;
+    }
+
+
+   
+
+    
